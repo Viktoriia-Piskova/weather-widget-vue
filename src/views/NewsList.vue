@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <SearchForm />
-    <ArticleCard />
+    <ArticleCard :articles="articles" />
   </div>
 </template>
 
@@ -19,14 +19,16 @@ export default {
   },
   data() {
     return {
-      news: null,
+      articles: null,
     };
   },
 
   created() {
     SearchNews.getNews()
       .then((response) => {
-        this.news = response.data;
+        this.articles = response.data.articles;
+        this.articles = Array.from(this.articles);
+        console.log(typeof this.articles);
       })
       .catch((error) => {
         console.log(error);

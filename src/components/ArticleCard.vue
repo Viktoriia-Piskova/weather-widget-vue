@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div class="article-card">
-      <h3>{{ news }}</h3>
+      <h3>{{ articles }}</h3>
     </div>
   </div>
 </template>
@@ -10,8 +10,8 @@
 export default {
   name: "ArticleCard",
   props: {
-    news: {
-      type: String,
+    articles: {
+      type: Array,
       required: true,
     },
   },
