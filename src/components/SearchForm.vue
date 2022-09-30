@@ -1,14 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>I'm searching for news about...</h1>
     <form action="" id="searchForm">
-      <label for="query"> I'm searching for news about...</label><br />
-      <input
-        type="text"
-        name="query"
-        id="query"
-        placeholder="e.g. animals"
-      /><br />
+      <input type="text" name="query" id="query" placeholder="e.g. animals" />
       <select name="category" id="category">
         <option value="business">business</option>
         <option value="entertainment">entertainment</option>
@@ -23,7 +17,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "SearchForm",
   props: {
     msg: String,
   },
@@ -34,6 +28,20 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+}
+
+select {
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 ul {

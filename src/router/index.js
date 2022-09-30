@@ -1,11 +1,17 @@
-import SearchForm from "@/components/SearchForm.vue";
+import NewsList from "@/views/NewsList.vue";
+import ContactView from "@/views/ContactView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
     path: "/",
     name: "search",
-    component: SearchForm,
+    component: NewsList,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: ContactView,
   },
   {
     path: "/about",
