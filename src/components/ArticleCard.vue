@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
     <div class="article-card">
-      <h3>{{ articles }}</h3>
-      <p>json</p>
+      <h3>{{ article.title }}</h3>
     </div>
   </div>
 </template>
@@ -11,8 +10,8 @@
 export default {
   name: "ArticleCard",
   props: {
-    articles: {
-      type: Array,
+    article: {
+      //type: Array,
       required: true,
     },
   },

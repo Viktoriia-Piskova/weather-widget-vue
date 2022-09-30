@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <SearchForm />
-    <ArticleCard :articles="articles" />
+    <ArticleCard
+      :article="article"
+      v-for="article in articles"
+      :key="article"
+    />
   </div>
 </template>
 
@@ -27,8 +31,9 @@ export default {
     SearchNews.getNews()
       .then((response) => {
         this.articles = response.data.articles;
-        this.articles = Array.from(this.articles);
-        console.log(typeof this.articles);
+        console.log(this.articles);
+        //this.articles = JSON.parse(this.articles);
+        //console.log(response);
       })
       .catch((error) => {
         console.log(error);
