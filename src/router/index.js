@@ -1,11 +1,11 @@
+import SearchForm from "@/components/SearchForm.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "search",
+    component: SearchForm,
   },
   {
     path: "/about",
