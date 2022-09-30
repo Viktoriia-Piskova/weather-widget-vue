@@ -1,4 +1,4 @@
-# weather-widget-vue
+# news-widget-vue
 
 ## Project setup
 ```
