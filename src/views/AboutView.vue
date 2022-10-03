@@ -46,7 +46,7 @@
         class="field"
       />
 
-      <h3>Would you like to receive our promo mails?</h3>
+      <h3>Would you like to receive our promo emails?</h3>
       <div>
         <input type="radio" v-model="event.promo" :value="1" name="promo" />
         <label>Yes</label>
