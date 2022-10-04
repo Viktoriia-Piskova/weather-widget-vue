@@ -1,8 +1,26 @@
 <template>
-  <nav>
-    <router-link to="/">Main</router-link> |
-    <router-link to="/subscribe">Subscribe</router-link> |
-    <router-link to="/contact">Contact</router-link>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Latest news</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <router-link to="/" class="nav-link">Main</router-link>
+          <router-link to="/subscribe" class="nav-link">Subscribe</router-link>
+          <router-link to="/contact" class="nav-link">Contact</router-link>
+        </div>
+      </div>
+    </div>
   </nav>
   <router-view />
 </template>
@@ -18,22 +36,6 @@ body * {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  display: inline-block;
-}
-
-nav a.router-link-exact-active {
-  color: #2809a9;
 }
 
 input {

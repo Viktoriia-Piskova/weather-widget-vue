@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <NewsCarousel />
     <SearchForm />
     <ArticleCard
       :article="article"
@@ -14,12 +15,14 @@
 import SearchForm from "@/components/SearchForm.vue";
 import SearchNews from "@/services/SearchNews";
 import ArticleCard from "@/components/ArticleCard.vue";
+import NewsCarousel from "@/components/NewsCarousel.vue";
 
 export default {
   name: "NewsList",
   components: {
     SearchForm,
     ArticleCard,
+    NewsCarousel,
   },
   data() {
     return {
