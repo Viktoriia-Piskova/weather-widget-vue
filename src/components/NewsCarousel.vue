@@ -28,21 +28,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img :src="images[0]" class="d-block w-100" alt="..." />
+        <img :src="images[0]" id="img1" class="d-block w-100" alt="..." />
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img :src="images[1]" class="d-block w-100" alt="..." />
+        <img :src="images[1]" id="img2" class="d-block w-100" alt="..." />
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img :src="images[2]" class="d-block w-100" alt="..." />
+        <img :src="images[2]" id="img3" class="d-block w-100" alt="..." />
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -95,5 +95,34 @@ export default {
 #carouselExampleDark {
   height: 50vh;
   overflow: hidden;
+}
+
+#img1,
+#img2,
+#img3 {
+  object-fit: cover;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+h5 {
+  color: #fff;
+  font-size: 7rem;
+}
+
+p {
+  color: #fff;
+  font-size: 2rem;
+}
+
+img {
+  filter: grayscale(100%);
 }
 </style>

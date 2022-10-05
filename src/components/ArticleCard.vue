@@ -35,7 +35,7 @@ export default {
   justify-content: space-around;
   border: 1px gray solid;
   margin: 20px;
-  box-shadow: #052653 5px 5px 14px;
+  box-shadow: #333435cd 5px 5px 14px;
 }
 
 .article-card:nth-child(even) {
@@ -44,7 +44,6 @@ export default {
 .photo-container {
   width: 50%;
   object-fit: none;
-  box-shadow: #052653 5px 5px 14px;
 }
 
 .photo {
@@ -77,9 +76,13 @@ export default {
 
 .title {
   font-size: 2rem;
-  background-image: linear-gradient(to right, rgb(22 39 192), rgb(0, 0, 0));
-  color: white;
-  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgba(55, 56, 57, 0.97),
+    rgb(0, 0, 0)
+  );
+  color: #dcd7d7;
+  padding: 26px;
   width: 100%;
 }
 </style>
