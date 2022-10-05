@@ -51,6 +51,10 @@
 </template>
 
 <style>
+body {
+  background-color: rgba(36, 36, 36, 0.19);
+}
+
 body * {
   box-sizing: border-box;
   margin: 0px;
@@ -71,7 +75,7 @@ input {
 }
 
 input:focus {
-  border: 3px solid #2c3e50;
+  border: 3px solid #303031;
   background-color: white;
 }
 
@@ -127,7 +131,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 2px solid #2809a9;
+  outline: 2px solid #252525;
 }
 label {
   color: rgba(0, 0, 0, 0.5);
@@ -182,7 +186,7 @@ textarea {
 [type="number"]:focus,
 [type="search"]:focus,
 [type="password"]:focus {
-  border-color: #2809a9;
+  border-color: #252525;
 }
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -266,7 +270,7 @@ select::ms-expand {
   margin-left: 1em;
 }
 .button.-fill-gradient {
-  background: linear-gradient(to right, rgb(22 39 192), rgb(207 106 106));
+  background: linear-gradient(to right, rgb(34, 34, 34), rgb(0, 0, 0));
   color: #ffffff;
 }
 .button.-fill-gray {

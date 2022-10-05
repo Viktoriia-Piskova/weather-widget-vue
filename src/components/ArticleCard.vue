@@ -1,7 +1,12 @@
 <template>
   <div class="article-card">
     <div class="photo-container">
-      <img class="photo" :src="article.urlToImage" alt="" />
+      <img
+        class="photo"
+        :src="article.urlToImage"
+        alt=""
+        onerror="this.src='https://via.placeholder.com/728x500.png?text=Could+not+find+image%20'"
+      />
     </div>
 
     <div class="article-content">
@@ -9,7 +14,7 @@
       <p class="description">{{ article.description }}</p>
       <p class="content">{{ article.content }}</p>
       <p class="additional-info">
-        <span>{{ article.author }}</span>
+        <a class="more-info" :href="article.url">Read more...</a>
       </p>
     </div>
   </div>
@@ -33,9 +38,9 @@ export default {
   /* flex-wrap: wrap; */
   align-items: stretch;
   justify-content: space-around;
-  border: 1px gray solid;
-  margin: 20px;
-  box-shadow: #333435cd 5px 5px 14px;
+  margin: 40px;
+  box-shadow: #33343582 1px 1px 14px;
+  background-color: #fff;
 }
 
 .article-card:nth-child(even) {
@@ -59,12 +64,14 @@ export default {
 }
 
 .description {
-  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
   padding: 20px;
 }
 
 .content {
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 16px;
   padding: 20px;
 }
 
@@ -74,15 +81,59 @@ export default {
   font-style: italic;
 }
 
+.more-info {
+  display: inline-block;
+  font-size: 27px;
+  padding: 21px;
+  color: #aea8a8;
+}
+
 .title {
-  font-size: 2rem;
+  font-size: 30px;
   background-image: linear-gradient(
     to right,
     rgba(55, 56, 57, 0.97),
     rgb(0, 0, 0)
   );
   color: #dcd7d7;
-  padding: 26px;
-  width: 100%;
+  padding: 25px 20%;
+  width: 140%;
+  transform: translate(0px, -10px);
+}
+
+@media only screen and (max-width: 1000px) {
+  .title {
+    padding: 20px;
+    width: 100%;
+    transform: none;
+  }
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: stretch;
+    justify-content: space-around;
+    margin: 30px 0px;
+    box-shadow: #33343582 1px 1px 14px;
+    background-color: #fff;
+  }
+
+  .article-card:nth-child(even) {
+    flex-direction: column;
+  }
+  .photo-container {
+    width: 100%;
+    object-fit: none;
+  }
+  .content {
+    display: none;
+  }
 }
 </style>

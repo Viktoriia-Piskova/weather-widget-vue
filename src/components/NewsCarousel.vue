@@ -123,6 +123,6 @@ p {
 }
 
 img {
-  filter: grayscale(100%);
+  filter: grayscale(10%);
 }
 </style>
