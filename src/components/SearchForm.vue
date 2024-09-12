@@ -10,7 +10,9 @@
         <option value="technology">technology</option>
       </select>
 
-      <button id="submit" type="submit">Search</button>
+      <button class="button -fill-gradient" id="submit" type="submit">
+        Search
+      </button>
     </form>
   </div>
 </template>
@@ -54,7 +56,7 @@ li {
   margin: 0 10px;
 }
 
-a {
+/* a {
   color: #42b983;
-}
+} */
 </style>
